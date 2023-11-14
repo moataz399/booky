@@ -2,6 +2,7 @@ import 'package:booky/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'features/splash/presentation/view/splash_view.dart';
 
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-
       child: GetMaterialApp(
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: primaryColor,
+          textTheme:
+              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
         ),
         home: const SplashView(),
       ),

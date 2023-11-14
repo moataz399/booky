@@ -20,7 +20,50 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 50.h),
           Text(
             'Best Seller',
-            style: Styles.titleM,
+            style: Styles.textStyle18,
+          ),
+          SizedBox(height: 20.h),
+          BestSellerListViewItem(),
+        ],
+      ),
+    );
+  }
+}
+
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 125.h,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.5 / 4,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                image: const DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage('assets/images/book.png'),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10.w,
+          ),
+          Column(
+            children: [
+              Text(
+                'Harry Potter and the Goblet of Fire',
+                overflow: TextOverflow.fade,
+                maxLines: 1,
+                style: Styles.textStyle18,
+              ),
+            ],
           )
         ],
       ),

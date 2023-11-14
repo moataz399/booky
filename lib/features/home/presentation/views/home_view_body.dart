@@ -11,7 +11,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24.w),
+      padding: EdgeInsets.symmetric(horizontal: 25.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -42,9 +42,9 @@ class BestSellerListViewItem extends StatelessWidget {
           AspectRatio(
             aspectRatio: 2.5 / 4,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: EdgeInsets.symmetric(horizontal: 80.w),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.w),
                 image: const DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage('assets/images/book.png'),
@@ -53,15 +53,18 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 10.w,
+            width: 30.w,
           ),
           Column(
             children: [
-              Text(
-                'Harry Potter and the Goblet of Fire',
-                overflow: TextOverflow.fade,
-                maxLines: 1,
-                style: Styles.textStyle18,
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  'Harry Potter and the Goblet of Fire',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.textStyle20,
+                ),
               ),
             ],
           )

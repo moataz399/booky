@@ -1,7 +1,7 @@
 import 'package:booky/core/utils/styles.dart';
+import 'package:booky/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
@@ -71,7 +71,7 @@ class BestSellerListViewItem extends StatelessWidget {
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      BookRating(),
+                      BookRating(mainAxisAlignment: MainAxisAlignment.start),
                     ],
                   )
                 ],
@@ -84,29 +84,3 @@ class BestSellerListViewItem extends StatelessWidget {
   }
 }
 
-class BookRating extends StatelessWidget {
-  const BookRating({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(
-          FontAwesomeIcons.solidStar,
-          color: Color(0xffFFDD4F),
-        ),
-        SizedBox(
-          width: 6.3.w,
-        ),
-        Text(
-          '4.8',
-          style: Styles.textStyle16,
-        ),
-        SizedBox(
-          width: 5.w,
-        ),
-        Text('(409)', style: Styles.textStyle14)
-      ],
-    );
-  }
-}

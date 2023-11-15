@@ -1,5 +1,4 @@
 
-
 import 'package:booky/features/home/presentation/views/widgets/book_details_view_ody.dart';
 import 'package:flutter/material.dart';
 class BookDetailsView extends StatelessWidget {

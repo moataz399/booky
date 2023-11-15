@@ -1,26 +1,26 @@
-import 'package:booky/core/utils/styles.dart';
+
+
+import 'package:booky/features/home/presentation/views/widgets/Custom_book_image.dart';
 import 'package:booky/features/home/presentation/views/widgets/book_rating.dart';
+import 'package:booky/features/home/presentation/views/widgets/books_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'Custom_book_image.dart';
-import 'custom_book_details_app_bar.dart';
+import '../../../../../core/utils/styles.dart';
 
-class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
+class BookDetailsSection extends StatelessWidget {
+  const BookDetailsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomBookDetailsAppBar(),
-        SizedBox(height: 10.h),
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * .2),
           child: CustomBookImage(),
         ),
-        SizedBox(height: 40.h),
+        SizedBox(height: 30.h),
         Text(
           'The Jungle Book ',
           style: Styles.textStyle30,
@@ -35,6 +35,9 @@ class BookDetailsViewBody extends StatelessWidget {
         ),
         SizedBox(height: 18.h),
         BookRating(mainAxisAlignment: MainAxisAlignment.center),
+        SizedBox(height: 30.h),
+        BooksActions(),
+        SizedBox(height: 30.h),
       ],
     );
   }

@@ -1,4 +1,4 @@
-import 'package:booky/features/home/presentation/views/home_view_body.dart';
+import 'package:booky/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {

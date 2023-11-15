@@ -1,0 +1,103 @@
+import 'package:booky/core/utils/styles.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 125.h,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.5 / 4,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 80.w),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.w),
+                image: const DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage('assets/images/book.png'),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 30.w,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.textStyle20,
+                  ),
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                SizedBox(
+                  child: Text(
+                    'j.k.Rowling ',
+                    style: Styles.textStyle14,
+                  ),
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      child: Text(
+                        '19.99\$',
+                        style: Styles.textStyle20
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    BookRating(),
+                  ],
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class BookRating extends StatelessWidget {
+  const BookRating({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Icon(
+          FontAwesomeIcons.solidStar,
+          color: Color(0xffFFDD4F),
+        ),
+        SizedBox(
+          width: 6.3.w,
+        ),
+        Text(
+          '4.8',
+          style: Styles.textStyle16,
+        ),
+        SizedBox(
+          width: 5.w,
+        ),
+        Text('(409)', style: Styles.textStyle14)
+      ],
+    );
+  }
+}

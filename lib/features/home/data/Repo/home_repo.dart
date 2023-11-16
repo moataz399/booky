@@ -1,7 +1,12 @@
+import 'package:booky/core/utils/errors.dart';
+import 'package:dartz/dartz.dart';
+
+import '../models/BookModel.dart';
+
 abstract class HomeRepo {
 
-  fetchBestSellerBooks();
+ Future<Either<Failure,List<BookModel>>> fetchBestSellerBooks();
 
-  fetchFeaturedBooks();
+ Future<List<BookModel>> fetchFeaturedBooks();
 
 }

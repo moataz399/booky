@@ -18,7 +18,7 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * .2),
-          child: CustomBookImage(),
+          child: const CustomBookImage(),
         ),
         SizedBox(height: 30.h),
         Text(
@@ -34,9 +34,9 @@ class BookDetailsSection extends StatelessWidget {
           ),
         ),
         SizedBox(height: 18.h),
-        BookRating(mainAxisAlignment: MainAxisAlignment.center),
+        const BookRating(mainAxisAlignment: MainAxisAlignment.center),
         SizedBox(height: 30.h),
-        BooksActions(),
+        const BooksActions(),
         SizedBox(height: 30.h),
       ],
     );

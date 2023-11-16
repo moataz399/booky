@@ -13,10 +13,10 @@ class BookDetailsViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          CustomBookDetailsAppBar(),
-          BookDetailsSection(),
+          const CustomBookDetailsAppBar(),
+          const BookDetailsSection(),
           SizedBox(height: 20.h),
-          SimilarBooksSection(),
+          const SimilarBooksSection(),
           SizedBox(height: 40.h),
         ],
       ),

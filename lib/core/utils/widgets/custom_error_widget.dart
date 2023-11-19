@@ -1,8 +1,8 @@
 import 'package:booky/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomerrorWidget extends StatelessWidget {
-  const CustomerrorWidget({super.key, required this.errMessage});
+class CustomErrorWidget extends StatelessWidget {
+  const CustomErrorWidget({super.key, required this.errMessage});
 
   final String errMessage;
 

@@ -1,5 +1,6 @@
 import 'package:booky/core/utils/styles.dart';
 import 'package:booky/features/home/presentation/views/widgets/book_rating.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -7,32 +8,41 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+  const BestSellerListViewItem({super.key, required this.imageUrl});
+
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouter.bookDetailsView);
-
       },
       child: SizedBox(
         height: 125.h,
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 2.5 / 4,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 80.w),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.w),
-                  image: const DecorationImage(
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: AspectRatio(
+                  aspectRatio: 2.5 / 4,
+                  child: CachedNetworkImage(
+                    imageUrl: imageUrl,
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/images/book.png'),
+                    errorWidget: (context, url, error) => const Icon(Icons.close),
+                    placeholder: (context, url) =>
+                        const Center(child: CircularProgressIndicator()),
                   ),
                 ),
               ),
             ),
+
+
+
+
+
             SizedBox(
               width: 30.w,
             ),
@@ -71,8 +81,8 @@ class BestSellerListViewItem extends StatelessWidget {
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      const BookRating(mainAxisAlignment: MainAxisAlignment.start),
-
+                      const BookRating(
+                          mainAxisAlignment: MainAxisAlignment.start),
                     ],
                   )
                 ],
@@ -84,4 +94,3 @@ class BestSellerListViewItem extends StatelessWidget {
     );
   }
 }
-

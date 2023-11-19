@@ -1,5 +1,3 @@
-
-
 import 'package:booky/features/home/presentation/views/widgets/Custom_book_image.dart';
 import 'package:booky/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:booky/features/home/presentation/views/widgets/books_action.dart';
@@ -18,7 +16,9 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * .2),
-          child: const CustomBookImage(),
+          child: CustomBookImage(
+              imgUrl:
+                  "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstatusneo.com%2Ffrom-pixels-to-reality-how-ai-generated-images-are-revolutionizing-industries%2F&psig=AOvVaw1Yp4059Wbt6PjH2Z_dK2Rl&ust=1700496212940000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMDOzJi40IIDFQAAAAAdAAAAABAE"),
         ),
         SizedBox(height: 30.h),
         Text(

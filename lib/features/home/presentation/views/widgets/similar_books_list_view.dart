@@ -15,7 +15,9 @@ class SimilarBooksListView extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.w),
-              child: const CustomBookImage(),
+              child: const CustomBookImage(
+                  imgUrl:
+                      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstatusneo.com%2Ffrom-pixels-to-reality-how-ai-generated-images-are-revolutionizing-industries%2F&psig=AOvVaw1Yp4059Wbt6PjH2Z_dK2Rl&ust=1700496212940000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMDOzJi40IIDFQAAAAAdAAAAABAE"),
             );
           }),
     );

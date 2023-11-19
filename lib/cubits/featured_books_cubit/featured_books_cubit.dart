@@ -20,5 +20,12 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     }, (books) {
       emit(FeaturedBooksSuccess(books));
     });
+
+
+
+
   }
+
+
+
 }

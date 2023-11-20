@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:booky/features/home/data/Repo/home_repo.dart';
 import 'package:booky/features/home/data/models/BookModel.dart';
 import 'package:meta/meta.dart';
 
-import '../../features/home/data/Repo/home_repo.dart';
 
 part 'featured_books_state.dart';
 

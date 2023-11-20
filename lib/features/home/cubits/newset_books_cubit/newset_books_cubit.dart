@@ -2,7 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:booky/features/home/data/Repo/home_repo.dart';
 import 'package:meta/meta.dart';
 
-import '../../features/home/data/models/BookModel.dart';
+import '../../data/models/BookModel.dart';
+
 
 part 'newset_books_state.dart';
 

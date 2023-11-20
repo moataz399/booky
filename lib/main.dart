@@ -1,6 +1,5 @@
 
 import 'package:booky/core/utils/constants.dart';
-import 'package:booky/cubits/featured_books_cubit/featured_books_cubit.dart';
 import 'package:booky/features/home/data/Repo/home_repo_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,7 +8,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'core/di/di.dart';
 import 'core/utils/app_router.dart';
-import 'cubits/newset_books_cubit/newset_books_cubit.dart';
+import 'features/home/cubits/featured_books_cubit/featured_books_cubit.dart';
+import 'features/home/cubits/newset_books_cubit/newset_books_cubit.dart';
 
 void main() {
   setupDI();
